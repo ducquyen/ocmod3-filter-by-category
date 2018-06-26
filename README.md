@@ -8,20 +8,20 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 ## Install
 * To begin, make backup, really!
 * Download archive [bin/filter-by-category.ocmod.zip](https://github.com/underr-ua/ocmod3-filter-by-category/raw/master/bin/filter-by-category.ocmod.zip)
-* Go to your OpenCart Admin Panel and open Extensions menu
-* Open Installer
-* Click the Upload button
-* Find, select and upload the _filter-by-category.ocmod.zip_
+* Open OpenCart Admin Panel
+* Extensions > Installer > [Upload]: open the file
 * See the "Success: You have modified extensions!" message
-* Go to Extensions > Modifications > [Refresh] button
-* Go to Dashboard > [Developer Settings] button > [Refresh] button
+* Extensions > Modifications > [Refresh]
+* Go to Dashboard > [Developer Settings] > Theme [Refresh]
+* Go to Dashboard > [Developer Settings] > SASS [Refresh]
 
 ## Uninstall
 * Make backup
-* OpenCart Admin -> Extensions menu - Installer
-* Find _filter-by-category.ocmod.zip_ in Install History list and click [Uninstall] button
-* Go to Extensions > Modifications > [Refresh] button
-* Go to Dashboard > [Developer Settings] button > [Refresh] button
+* OpenCart Admin -> Extensions menu > Installer
+* Extensions > Install History: find filter-by-category.ocmod.zip and click [Uninstall]
+* Extensions > Modifications > [Refresh]
+* Go to Dashboard > [Developer Settings] > Theme [Refresh]
+* Go to Dashboard > [Developer Settings] > SASS [Refresh]
 
 ## Additional links
 
