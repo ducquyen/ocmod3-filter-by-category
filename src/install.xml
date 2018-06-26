@@ -16,7 +16,7 @@
     <file path="admin/controller/catalog/product.php">
         <operation>
             <search><![CDATA[$url = '';]]></search>
-            <add position="before"><![CDATA[          if (isset($this->request->get['filter_category'])) {
+            <add position="after"><![CDATA[          if (isset($this->request->get['filter_category'])) {
                 $url .= '&filter_category=' . $this->request->get['filter_category'];
             }]]></add>
         </operation>
