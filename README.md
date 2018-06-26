@@ -24,7 +24,7 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 * Go to Dashboard > [Developer Settings] > SASS [Refresh]
 
 ## Additional links
-
+* [opencart.com](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
 * [underr.space](https://underr.space/notes/projects/project-007.html)
 
 ## Donation
