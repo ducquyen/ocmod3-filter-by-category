@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  * filter-by-category v1.0 (https://github.com/underr-ua/ocmod3-filter-by-category)
+  * Product Filter By Category v1.1 (https://github.com/underr-ua/ocmod3-filter-by-category)
   * Copyright 2018 Burkatskyi Andrii aka underr
   * Licensed under MIT (https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE)
 -->
 
 <modification>
-    <name>[underr] Filter Products By Category</name>
+    <name>[underr] Product Filter By Category</name>
     <code>filter-by-category</code>
-    <version>1.0</version>
+    <version>1.1</version>
     <author>Andrii Burkatskyi aka underr</author>
     <link>https://github.com/underr-ua/ocmod3-filter-by-category/</link>
 
-    <file path="admin/controller/catalog/product.php" error="skip">
-        <operation error="skip">
+    <file path="admin/controller/catalog/product.php" error="log">
+        <operation error="log">
             <search><![CDATA[$url = '';]]></search>
             <add position="after"><![CDATA[          if (isset($this->request->get['filter_category'])) {
                 $url .= '&filter_category=' . $this->request->get['filter_category'];
             }]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[protected function getList() {]]></search>
             <add position="after"><![CDATA[            if (isset($this->request->get['filter_category'])) {
                 $filter_category = $this->request->get['filter_category'];
@@ -30,12 +30,12 @@
             }]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA['filter_name'	  => $filter_name,]]></search>
             <add position="before"><![CDATA['filter_category' => $filter_category,]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$product_total = $this->model_catalog_product->getTotalProducts($filter_data);]]></search>
             <add position="after"><![CDATA[
             $this->load->model('catalog/category');
@@ -43,17 +43,17 @@
             ]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$data['products'][] = array(]]></search>
             <add position="before"><![CDATA[$category =  $this->model_catalog_product->getProductCategories($result['product_id']);]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA['name'       => $result['name'],]]></search>
             <add position="before"><![CDATA['category'   => $category,]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$data['filter_name'] = $filter_name;]]></search>
             <add position="before"><![CDATA[
             $data['column_category'] = $this->language->get('column_category');
@@ -61,38 +61,52 @@
             ]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$data['filter_name'] = $filter_name;]]></search>
             <add position="before"><![CDATA[$data['filter_category'] = $filter_category;]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$data['sort_name'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=pd.name' . $url, true);]]></search>
             <add position="before"><![CDATA[$data['sort_category'] = $this->url->link('catalog/product', 'user_token=' . $this->session->data['user_token'] . '&sort=p2c.category' . $url, true);]]></add>
         </operation>
     </file>
 
     <file path="admin/model/catalog/product.php">
-        <operation error="skip">
-            <search><![CDATA[$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";]]></search>
-            <add position="replace"><![CDATA[
-            $sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
-
-                if (!empty($data['filter_category'])) {
-
-                $sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
-            }
-
-            $sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
-            ]]></add>
+        <operation error="log">
+            <search><![CDATA[$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";]]></search>
+            <add position="after"><![CDATA[
+            if (!empty($data['filter_category'])) {
+			    $sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
+            }]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
+            <search><![CDATA[$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";]]></search>
+            <add position="replace"><![CDATA[
+        $sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
+
+        if (!empty($data['filter_category'])) {
+            $sql .= " LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (p.product_id = p2c.product_id)";
+        }
+
+        $sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";]]></add>
+        </operation>
+
+        <operation error="log">
+            <search><![CDATA[$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";]]></search>
+            <add position="after"><![CDATA[
+            if (!empty($data['filter_category'])) {
+			    $sql .= " AND p2c.category_id LIKE '" . $this->db->escape($data['filter_category']) . "%'";
+		    }]]></add>
+        </operation>
+
+        <operation error="log">
             <search><![CDATA['p.price',]]></search>
             <add position="after"><![CDATA['p2c.category_id',]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[$sql .= " GROUP BY p.product_id";]]></search>
             <add position="before"><![CDATA[
             if (!empty($data['filter_category'])) {
@@ -115,8 +129,8 @@
         </operation>
     </file>
 
-    <file path="admin/view/template/catalog/product_list.twig" error="skip">
-        <operation error="skip">
+    <file path="admin/view/template/catalog/product_list.twig" error="log">
+        <operation error="log">
             <search><![CDATA[var filter_quantity = $('input[name=\'filter_quantity\']').val();]]></search>
             <add position="before"><![CDATA[
             var filter_category = $('select[name=\'filter_category\']').val();
@@ -127,17 +141,17 @@
             ]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[<td class="text-right">{% if sort == 'p.quantity' %}]]></search>
             <add position="before"><![CDATA[<td class="text-right">{% if sort == 'p2c.category_id' %}<a href="{{ sort_category }}" class="{{ order|lower }}">{{ column_category }}</a>{% else %}<a href="{{ sort_category }}">{{ column_category }}</a>{% endif %}</td>]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search><![CDATA[<td class="text-right">{% if product.quantity <= 0 %}]]></search>
             <add position="before"><![CDATA[<td class="text-right">{% for category in categories %}{% if category.category_id in product.category %}{{ category.name }}<br>{% endif %}{% endfor %}<br></td>]]></add>
         </operation>
 
-        <operation error="skip">
+        <operation error="log">
             <search index="0"><![CDATA[<div class="form-group">]]></search>
             <add position="before"><![CDATA[
             <div class="form-group">
