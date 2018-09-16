@@ -1,7 +1,7 @@
 # Filter By Category
 
 ## Description
-Filter By Category - free extension is for CMS Opencart 3 that allows to filter products by category in admin panel.
+The Filter By Category extension is for CMS Opencart 3. It allows to filter products by category in admin panel.
 Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## Change log
@@ -32,10 +32,10 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 * Go to Dashboard > [Developer Settings] > Theme [Refresh]
 * Go to Dashboard > [Developer Settings] > SASS [Refresh]
 
-## Demo
+## Live demo
 * Admin - [Product list](http://051c5f20.freevar.com/www/plus/admin/index.php?route=catalog/product)
 
-## Additional links
+## Links
 * [opencart.com](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
 * [underr.space](https://underr.space/notes/projects/project-007.html)
 
