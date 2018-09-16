@@ -11,13 +11,13 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## Change log
 * v1.3 (2018.09.15):
-  * Code improvements
+  * Code improvements.
 * v1.2 (2018.09.08):
-  * Fixed text entries
+  * Fixed text entries.
 * v1.1 (2018.09.07):
-  * Fixed wrong filtered products count and pagination issue
+  * Fixed wrong filtered products count and pagination issue.
 * v1.0 (2018.06.26):
-  * First release
+  * First release.
 
 ## How to install
 * To begin, make backup, really!
