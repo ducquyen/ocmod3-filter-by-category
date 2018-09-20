@@ -21,27 +21,26 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## How to install
 * To begin, make backup, really!
-* Download archive [bin/filter-by-category.ocmod.zip](https://github.com/underr-ua/ocmod3-filter-by-category/raw/master/bin/filter-by-category.ocmod.zip)
-* Open OpenCart Admin Panel
-* Extensions > Installer > [Upload]: open the file filter-by-category.ocmod.zip
-* See the "Success: You have modified extensions!" message
-* Extensions > Modifications > [Refresh]
-* Go to Dashboard > [Developer Settings] > Theme [Refresh]
-* Go to Dashboard > [Developer Settings] > SASS [Refresh]
+* Open Admin Panel
+* Admin > Extensions > Installer > [Upload]: open the extension file
+* Admin > Extensions > Modifications > [Refresh]
+* Admin > Dashboard > [Developer Settings] > [Refresh]
+
+## How to configure
+* No need to configure
 
 ## How to uninstall
 * Make backup
-* OpenCart Admin -> Extensions menu > Installer
-* Extensions > Install History: find the file filter-by-category.ocmod.zip and click [Uninstall]
-* Extensions > Modifications > [Refresh]
-* Go to Dashboard > [Developer Settings] > Theme [Refresh]
-* Go to Dashboard > [Developer Settings] > SASS [Refresh]
+* Open Admin Panel
+* Admin > Extensions > Installer > Install History > find the extension file > [Uninstall]
+* Admin > Extensions > Modifications > [Refresh]
+* Admin > Dashboard > [Developer Settings] > [Refresh]
 
 ## Live demo
-* Admin - [Product list](http://051c5f20.freevar.com/www/plus/admin/index.php?route=catalog/product)
+* [Admin Demo](http://051c5f20.freevar.com/www/plus/admin/index.php?route=catalog/product) - Product list
 
 ## Links
-* [opencart.com](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
+* [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
 * [underr.space](https://underr.space/notes/projects/project-007.html)
 
 ## Donation

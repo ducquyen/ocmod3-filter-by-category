@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  * Product Filter By Category v1.3 (https://github.com/underr-ua/ocmod3-filter-by-category)
+  * Filter By Category v1.3 (https://github.com/underr-ua/ocmod3-filter-by-category)
   * Copyright 2018 Burkatskyi Andrii aka underr
-  * Licensed under MIT (https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE)
+  * Licensed under MIT (https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt)
 -->
 
 <modification>
-    <name>[underr] Product Filter By Category</name>
+    <name>[underr] Filter By Category</name>
     <code>filter-by-category</code>
     <version>1.3</version>
     <author>Andrii Burkatskyi aka underr</author>
