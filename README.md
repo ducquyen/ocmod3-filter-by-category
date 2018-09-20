@@ -2,7 +2,8 @@
 
 ## Description
 The Filter By Category extension is for CMS Opencart 3. It allows to filter products by category in admin panel.
-Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
+
+The extension has been tested with OC 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## Features
 * Allows to filter products by category in admin panel.
@@ -21,20 +22,20 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 
 ## How to install
 * To begin, make backup, really!
-* Open Admin Panel
-* Admin > Extensions > Installer > [Upload]: open the extension file
-* Admin > Extensions > Modifications > [Refresh]
-* Admin > Dashboard > [Developer Settings] > [Refresh]
+* Open Admin Panel.
+* Admin > Extensions > Extensions > Installer > [Upload]: open the extension file.
+* Admin > Extensions > Extensions > Modifications > [Refresh].
+* Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## How to configure
-* No need to configure
+No need to configure.
 
 ## How to uninstall
-* Make backup
-* Open Admin Panel
-* Admin > Extensions > Installer > Install History > find the extension file > [Uninstall]
-* Admin > Extensions > Modifications > [Refresh]
-* Admin > Dashboard > [Developer Settings] > [Refresh]
+* Make backup.
+* Open Admin Panel.
+* Admin > Extensions > Extensions > Installer > Install History > find the extension file > [Uninstall].
+* Admin > Extensions > Extensions > Modifications > [Refresh].
+* Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
 * [Admin Demo](http://051c5f20.freevar.com/www/plus/admin/index.php?route=catalog/product) - Product list
@@ -44,4 +45,4 @@ Have been tested with 3.0.2.0 only, but should work with other OC 3.x versions.
 * [underr.space](https://underr.space/notes/projects/project-007.html)
 
 ## Donation
-<a href='https://www.liqpay.ua/en/checkout/card/underr' target='_blank'><img src='https://image.ibb.co/nA3HoS/liqpay.png' border='0' alt='Donate me with LiqPay'/></a>
+[![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)

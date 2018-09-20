@@ -1,24 +1,26 @@
-# Copyright 2018 Andrii Burkatskyi aka underr
+# Filter By Category v1.3 (https://github.com/underr-ua/ocmod3-filter-by-category)
+# Copyright 2018 Burkatskyi Andrii aka underr
+# Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt
 
-dir=$(shell pwd)
-zip=$(shell basename $(dir)).ocmod.zip
+zip=$(shell basename `pwd`).ocmod.zip
 
 license=LICENSE.txt
 readme=README.md
+datetime=201801010000.00
 src=src
 bin=bin
 
 
-all: clean makedir makezip addtext
+all: clean makedir timestamp makezip
 
 makedir:
 	mkdir -p "$(bin)"
 
-makezip:
-	cd "$(src)" && zip -9 -r "../$(bin)/$(zip)" * && cd ..
+timestamp:
+	find . -exec touch -a -m -t $(datetime) {} \;
 
-addtext:
-	zip -9 -j "$(bin)/$(zip)" "$(readme)" "$(license)"
+makezip:
+	cd "$(src)" && zip -9qrX "../$(bin)/$(zip)" * && cd .. && zip -9qrX "$(bin)/$(zip)" "$(readme)" "$(license)"
 
 clean:
 	@echo Cleaning...
