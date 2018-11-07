@@ -150,7 +150,7 @@
 
         <operation error="log">
             <search><![CDATA[<td class="text-right">{% if product.quantity <= 0 %}]]></search>
-            <add position="before"><![CDATA[                    <td class="text-left">{% for category in categories %}{% if category.category_id in product.category %}{{ category.name }}<br>{% endif %}{% endfor %}<br></td>]]></add>
+            <add position="before"><![CDATA[                    <td class="text-left">{% for category in categories %}{% if category.category_id in product.category %}{{ category.name }}<br>{% endif %}{% endfor %}</td>]]></add>
         </operation>
 
         <operation error="log">
