@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-  * Filter By Category v1.3 (https://github.com/underr-ua/ocmod3-filter-by-category)
+  * Filter By Category v1.4 (https://github.com/underr-ua/ocmod3-filter-by-category)
   * Copyright 2018 Burkatskyi Andrii aka underr
   * Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt
 -->
@@ -9,7 +9,7 @@
 <modification>
     <name>[underr] Filter By Category</name>
     <code>filter-by-category</code>
-    <version>1.3</version>
+    <version>1.4</version>
     <author>Andrii Burkatskyi aka underr</author>
     <link>https://github.com/underr-ua/ocmod3-filter-by-category/</link>
 
@@ -60,9 +60,6 @@
         <operation error="log">
             <search><![CDATA[$data['filter_name'] = $filter_name;]]></search>
             <add position="before"><![CDATA[
-        $data['column_category'] = $this->language->get('column_category');
-        $data['entry_all_categories'] = $this->language->get('entry_all_categories');
-
 		$data['filter_category'] = $filter_category;]]></add>
         </operation>
 
@@ -144,8 +141,8 @@
 
         <operation error="log">
             <search><![CDATA[<td class="text-right">{% if sort == 'p.quantity' %}]]></search>
-            <!-- <add position="before"><![CDATA[                      <td class="text-left">{% if sort == 'p2c.category_id' %} <a href="{{ sort_category }}" class="{{ order|lower }}">{{ column_category }}</a> {% else %} <a href="{{ sort_category }}">{{ column_category }}</a> {% endif %}</td>]]></add> -->
-            <add position="before"><![CDATA[                      <td class="text-left">{{ column_category }}</td>]]></add>
+            <!-- <add position="before"><![CDATA[                      <td class="text-left">{% if sort == 'p2c.category_id' %} <a href="{{ sort_category }}" class="{{ order|lower }}">{{ entry_category }}</a> {% else %} <a href="{{ sort_category }}">{{ entry_category }}</a> {% endif %}</td>]]></add> -->
+            <add position="before"><![CDATA[                      <td class="text-left">{{ entry_category }}</td>]]></add>
         </operation>
 
         <operation error="log">
@@ -157,9 +154,9 @@
             <search index="0"><![CDATA[<div class="form-group">]]></search>
             <add position="before"><![CDATA[
             <div class="form-group">
-                <label class="control-label" for="input-category">{{ column_category }}</label>
+                <label class="control-label" for="input-category">{{ entry_category }}</label>
                 <select name="filter_category" id="input-category" class="form-control" >
-                    <option value="*">{{entry_all_categories}}</option>
+                    <option value="*">{{ entry_category }}</option>
                     {% for category in categories %}
                         {% if category.category_id == filter_category %}
                             <option value="{{ category.category_id }}" selected="selected">{{ category.name }}</option>
@@ -170,39 +167,6 @@
                 </select>
             </div>
             ]]></add>
-        </operation>
-    </file>
-
-    <file path="admin/language/en-gb/catalog/product.php" error="skip">
-        <operation>
-            <search><![CDATA[$_['column_name']]]></search>
-            <add position="before"><![CDATA[$_['column_category']        = 'Categories';]]></add>
-        </operation>
-        <operation>
-            <search><![CDATA[$_['entry_category']]]></search>
-            <add position="after"><![CDATA[$_['entry_all_categories']   = 'All categories';]]></add>
-        </operation>
-    </file>
-
-    <file path="admin/language/ru-ru/catalog/product.php" error="skip">
-        <operation>
-            <search><![CDATA[$_['column_name']]]></search>
-            <add position="before"><![CDATA[$_['column_category']        = 'Категории';]]></add>
-        </operation>
-        <operation>
-            <search><![CDATA[$_['entry_category']]]></search>
-            <add position="after"><![CDATA[$_['entry_all_categories']   = 'Все категории';]]></add>
-        </operation>
-    </file>
-
-    <file path="admin/language/ua-uk/catalog/product.php" error="skip">
-        <operation>
-            <search><![CDATA[$_['column_name']]]></search>
-            <add position="before"><![CDATA[$_['column_category']        = 'Категорії';]]></add>
-        </operation>
-        <operation>
-            <search><![CDATA[$_['entry_category']]]></search>
-            <add position="after"><![CDATA[$_['entry_all_categories']   = 'Усі категорії';]]></add>
         </operation>
     </file>
 

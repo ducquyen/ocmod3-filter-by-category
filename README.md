@@ -1,17 +1,22 @@
 # Filter By Category
 
 ## Description
-The Filter By Category extension is for CMS Opencart 3. It allows to filter products by category in admin panel.
+The Product Date Added extension is for CMS Opencart 3.x Admin Panel. It allows to filter products by category.
 
-The extension has been tested with OC 3.0.2.0 only, but should work with other OC 3.x versions.
+The extension has been tested with OC 3.0.2.0 and default template, but should work with other OC 3.x and default-compatible templates and can be easily modified for newer OC versions and custom templates.
+
+Please feel free to contact me by email <underr.public@gmail.com> or through the support form and comments on Opencart Marketplace (see links below).
 
 ## Features
-* Allows to filter products by category in admin panel.
-* Adds column with categories in the product list.
-* Does not change original files - OCMOD modification.
+* Filter products by category in admin panel.
+* Column with categories in the product list.
+* Multilingual.
+* OCMOD - does not change original files.
 
 ## Change log
-* v1.3 (2018.09.15):
+* v1.4 (2019.01.27):
+  * Code improvements.
+* v1.4 (2018.09.15):
   * Code improvements.
 * v1.2 (2018.09.08):
   * Fixed text entries.
@@ -38,7 +43,7 @@ No need to configure.
 * Admin > Dashboard > [Developer Settings] > [Refresh].
 
 ## Live demo
-* [Admin Demo](http://051c5f20.freevar.com/www/plus/admin/index.php?route=catalog/product) - Product list
+* [Admin Demo - Product list](https://oc.underr.thats.im/d2/admin/index.php?route=catalog/product)
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)

@@ -1,4 +1,4 @@
-# Filter By Category v1.3 (https://github.com/underr-ua/ocmod3-filter-by-category)
+# Filter By Category v1.4 (https://github.com/underr-ua/ocmod3-filter-by-category)
 # Copyright 2018 Burkatskyi Andrii aka underr
 # Licensed under MIT - https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt
 
