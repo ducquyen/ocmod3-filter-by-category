@@ -1,7 +1,7 @@
 # Filter By Category
 
 ## Description
-The Product Date Added extension is for CMS Opencart 3.x Admin Panel. It allows to filter products by category.
+The Filter By Category extension is for CMS Opencart 3.x Admin Panel. It allows to filter products by category.
 
 The extension has been tested with OC 3.0.2.0 and default template, but should work with other OC 3.x and default-compatible templates and can be easily modified for newer OC versions and custom templates.
 
