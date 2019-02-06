@@ -53,4 +53,5 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 ## Donation
 <a href="https://www.patreon.com/bePatron?u=16992638" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
 
+[![Patreon](https://c6.patreon.com/becomePatronButton.bundle.js)](https://www.patreon.com/bePatron?u=16992638)
 [![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
