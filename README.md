@@ -43,8 +43,11 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 * Admin > Extensions > Extensions > Modifications > [Refresh]
 * Admin > Dashboard > [Developer Settings] > [Refresh]
 
-## Live demo
-* [Admin Demo - Product list](https://oc.underr.thats.im/d2/admin/index.php?route=catalog/product)
+## Live demo [Main]
+* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=catalog/product)
+
+## Live demo [Alternative]
+* [Admin Demo](https://oc3020.underr.thats.im/b/admin/index.php?route=catalog/product)
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
