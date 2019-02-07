@@ -38,7 +38,6 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 ## How to uninstall
 * Make backup!
 * Open Admin Panel
-* Admin > Extensions > Extensions > Modules > [underr] Filter By Category > [Uninstall]
 * Admin > Extensions > Extensions > Installer > Install History > find the extension file > [Uninstall]
 * Admin > Extensions > Extensions > Modifications > [Refresh]
 * Admin > Dashboard > [Developer Settings] > [Refresh]
