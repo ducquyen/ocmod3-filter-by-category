@@ -8,14 +8,14 @@ The extension has been tested with OC 3.0.2.0 and default template, but should w
 Please feel free to contact me on Opencart Marketplace through the form "GET SUPPORT" or comments (see links below).
 
 ## Features
-* Filter product list in admin panel by category
-* Add column with categories in product list
+* Allows to filter product list by categories
+* Adds column with product categories in product list
 * Multilingual
 * OCMOD - does not change original files
 
 ## Change log
 * v1.5 (2019.02.05):
-  * Categories list sorting by names added
+  * Fixed sorting in dropdown list
   * Code improvements
 * v1.4 (2019.01.27):
   * Code improvements.
