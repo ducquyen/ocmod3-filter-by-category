@@ -52,5 +52,10 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
 * [underr.space](https://underr.space/notes/projects/project-007.html)
 
+
+## License
+Licensed under [MIT](https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt)
+
 ## Donation
+[![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
 [![Patreon](https://i.ibb.co/RvTchQm/become-a-patron-button.png)](https://www.patreon.com/underr)
