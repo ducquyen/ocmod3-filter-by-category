@@ -6,21 +6,21 @@
  * The Filter By Category extension is for CMS Opencart 3.x Admin Panel.
  * It allows to filter products by category.
  *
- * @author		Andrii Burkatskyi aka underr underr.ua@gmail.com
- * @copyright	Copyright (c) 2018-2019 Andrii Burkatskyi
- * @license		https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt MIT
+ * @author      Andrii Burkatskyi aka underr underr.ua@gmail.com
+ * @copyright   Copyright (c) 2018-2019 Andrii Burkatskyi
+ * @license     https://raw.githubusercontent.com/underr-ua/ocmod3-filter-by-category/master/LICENSE.txt MIT
  *
- * @version		1.5
+ * @version     1.6
  *
- * @see			https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415
- * @see			https://underr.space/notes/projects/project-007.html
- * @see			https://github.com/underr-ua/ocmod3-filter-by-category
+ * @see         https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415
+ * @see         https://underr.space/notes/projects/project-007.html
+ * @see         https://github.com/underr-ua/ocmod3-filter-by-category
  */ -->
 
 <modification>
     <name>[underr] Filter By Category</name>
     <code>filter-by-category</code>
-    <version>1.5</version>
+    <version>1.6</version>
     <author>Andrii Burkatskyi aka underr</author>
     <link>https://github.com/underr-ua/ocmod3-filter-by-category/</link>
 
@@ -73,7 +73,8 @@
                 <![CDATA[// Filter By Category
 		$sql = "SELECT p2c.* FROM " . DB_PREFIX . "product_to_category AS p2c";
 		$sql .= " JOIN " . DB_PREFIX . "category_description AS cd ON cd.category_id = p2c.category_id";
-		$sql .= " WHERE product_id = '" . (int)$product_id . "'";
+		// $sql .= " WHERE product_id = '" . (int)$product_id . "'";
+		$sql .= " WHERE product_id = '" . (int)$product_id . "' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 		$sql .= " ORDER BY cd.name";
 
 		$query = $this->db->query($sql);]]>

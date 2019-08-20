@@ -3,8 +3,6 @@
 ## Description
 The Filter By Category extension is for CMS Opencart 3.x Admin Panel. It allows to filter products by categories.
 
-The extension has been tested with OC 3.0.2.0 and default template, but should work with other OC 3.x and default-compatible templates and can be easily modified for newer OC versions and custom templates.
-
 Please feel free to contact me on Opencart Marketplace through the form "GET SUPPORT" or comments (see links below).
 
 ## Features
@@ -14,9 +12,11 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 * OCMOD - does not change original files
 
 ## Change log
+* v1.6 (2019.08.20):
+  * Fixed bug with duplication of categories when editing products.
 * v1.5 (2019.02.05):
-  * Fixed sorting in dropdown list
-  * Code improvements
+  * Fixed sorting in dropdown list.
+  * Code improvements.
 * v1.4 (2019.01.27):
   * Code improvements.
 * v1.3 (2018.09.15):
