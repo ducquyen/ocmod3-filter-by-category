@@ -31,30 +31,24 @@ Please feel free to contact me on Opencart Marketplace through the form "GET SUP
 ## How to install
 * To begin, make backup, really!
 * Open Admin Panel
-* Admin > Extensions > Installer > [Upload]: open the extension file
+* Admin > Extensions > Installer > [Upload]: filter-by-category.ocmod.zip
 * Admin > Extensions > Modifications > [Refresh]
 * Admin > Dashboard > [Developer Settings] > [Refresh]
 
 ## How to uninstall
 * Make backup!
 * Open Admin Panel
-* Admin > Extensions > Installer > Install History > find the extension file > [Uninstall]
+* Admin > Extensions > Installer > Install History > filter-by-category.ocmod.zip > [Uninstall]
 * Admin > Extensions > Modifications > [Refresh]
 * Admin > Dashboard > [Developer Settings] > [Refresh]
 
-## Live demo [Main]
-* [Admin Demo](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=catalog/product)
-
-## Live demo [Alternative]
-* [Admin Demo](https://oc3020.underr.thats.im/b/admin/index.php?route=catalog/product)
+## Live demo
+* [Admin](http://ocmod.freevar.com/oc3020/b/admin/index.php?route=catalog/product)
 
 ## Links
 * [Opencart Marketplace](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=34415)
-* [underr.space](https://underr.space/notes/projects/project-007.html)
+* [Homepage](https://underr.space/notes/projects/project-007.html)
 
 ## License
 Licensed under [MIT](https://raw.githubusercontent.com/underr-ua/ocmod3-sort-by-newest/master/LICENSE.txt)
 
-## Donation
-[![Donate me with LiqPay](https://image.ibb.co/nA3HoS/liqpay.png)](https://www.liqpay.ua/en/checkout/card/underr)
-[![Patreon](https://i.ibb.co/RvTchQm/become-a-patron-button.png)](https://www.patreon.com/underr)
